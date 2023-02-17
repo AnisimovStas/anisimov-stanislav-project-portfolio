@@ -1,0 +1,11 @@
+.portfolio-nav {
+  @include max_768 {
+    display: none;
+  }
+}
+
+.portfolio-links__about {
+  @include _768 {
+    display: none;
+  }
+}

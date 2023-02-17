@@ -1,2 +1,63 @@
 @import "common";
-@import "test";
+@import "index-media";
+
+// Хедер
+
+.portfolio-header {
+  height: 75px;
+  background-color: $main-color;
+  display: flex;
+  align-items: center;
+  flex-direction: co;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.portfolio-header-title {
+  width: 150px;
+  @extend .border;
+}
+.portfolio-nav {
+  @extend .border;
+}
+.portfolio-nav__list {
+  @extend .flexRow;
+}
+.portfolio-nav__item {
+  @include hover(red);
+  @include mx-(3px);
+  @extend .border;
+}
+.portfolio-about {
+  @extend .border;
+}
+
+.portfolio__links {
+  @extend .flexRow;
+}
+.portfolio-links__about {
+  @include mx-(5px);
+  @include hover($main-hover);
+}
+.language-switcher {
+  @extend .border;
+  @include hover($main-hover);
+}
+
+// Основной контент
+
+.portfolio-content {
+  align-items: center;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.project {
+  width: 300px;
+  height: 200px;
+  align-items: center;
+  margin: 20px;
+  @extend .border;
+  @extend .flexColl;
+  justify-content: space-around;
+  @include hover($main-hover);
+}
