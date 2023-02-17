@@ -1,11 +1,16 @@
 .portfolio-nav {
-  @include max_768 {
+  @include max_576 {
     display: none;
   }
 }
 
 .portfolio-links__about {
-  @include _768 {
+  @include _576 {
     display: none;
+  }
+}
+.main {
+  @include _576 {
+    flex-direction: row !important;
   }
 }

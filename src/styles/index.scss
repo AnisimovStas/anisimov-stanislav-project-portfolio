@@ -17,9 +17,11 @@
   @extend .border;
 }
 .portfolio-nav {
+  width: 80%;
   @extend .border;
 }
 .portfolio-nav__list {
+  justify-content: start;
   @extend .flexRow;
 }
 .portfolio-nav__item {
@@ -45,8 +47,11 @@
 
 // Основной контент
 
-.portfolio-content {
+.main {
+  height: 90vh;
+  @extend .border;
   align-items: center;
+  justify-content: center;
   margin: auto;
   display: flex;
   flex-direction: column;
