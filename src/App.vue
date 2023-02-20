@@ -26,9 +26,7 @@ const projects = ref(projectsData);
       </ul>
     </nav>
     <div class="portfolio__links portfolio-links">
-      <div class="portfolio-links__about">
-        <p>Обо мне</p>
-      </div>
+      <div class="portfolio-links__about">Обо мне</div>
       <div class="portfolio-links__language-switcher language-switcher">
         <div class="language-switcher">
           <button
@@ -77,6 +75,7 @@ const projects = ref(projectsData);
         <div class="project__title">
           <p>{{ project.name }}</p>
         </div>
+        <div class="project__description">{{ project.description }}</div>
       </div>
     </div>
   </main>

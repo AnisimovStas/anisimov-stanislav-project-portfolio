@@ -43,9 +43,8 @@
 }
 
 @mixin mx-($value) {
-  margin: $value;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-left: $value;
+  margin-right: $value;
 }
 
 @mixin hover($color) {

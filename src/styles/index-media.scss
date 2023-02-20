@@ -1,17 +1,22 @@
 .portfolio-nav {
-  @include max_576 {
+  @include max_992 {
     display: none;
   }
 }
 
 .portfolio-links__about {
-  @include _576 {
+  @include _992 {
     display: none !important;
   }
 }
 .main {
-  @include _576 {
+  @include _992 {
     flex-direction: row !important;
     height: 720px;
+  }
+}
+.project {
+  @include _992 {
+    @include mx-(20px);
   }
 }
