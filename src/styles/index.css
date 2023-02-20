@@ -1,8 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Koulen&family=Oswald:wght@200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
-body {
-  overflow-y: hidden; /* Hide vertical scrollbar */
-  overflow-x: hidden; /* Hide horizontal scrollbar */
+::-webkit-scrollbar {
+  display: none;
 }
 
 html,
@@ -159,7 +158,7 @@ body {
   justify-content: center;
 }
 
-.border, .project, .main, .portfolio-about, .portfolio-nav {
+.border, .project__title, .project, .portfolio-about {
   border: 1px solid;
 }
 
@@ -269,16 +268,19 @@ body {
 }
 
 .portfolio-header-title {
+  margin-left: 3px;
   color: rgb(255, 255, 255);
   cursor: default;
 }
 .portfolio-header-title:hover {
-  animation: animated-gradient 2s infinite alternate-reverse;
-}
-@keyframes animated-gradient {
-  to {
-    background-position: 200%;
-  }
+  color: transparent;
+  background-image: linear-gradient(to right, #000000, #000000, #000000, #000000, #000000);
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 200%;
+  background-position: -200%;
+  transition: all ease-in-out 1s;
+  cursor: pointer;
 }
 
 .portfolio-header-title__mainText {
@@ -294,16 +296,18 @@ body {
 }
 
 .portfolio-nav__list {
+  cursor: pointer;
   justify-content: start;
 }
 
 .portfolio-nav__item {
+  text-align: center;
   display: inline-block;
   padding: 0.75rem 1.25rem;
   border-radius: 10rem;
   color: #fff;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 0.8rem;
   letter-spacing: 0.15rem;
   transition: all 0.3s;
   position: relative;
@@ -344,6 +348,7 @@ body {
 }
 
 .portfolio-links__about {
+  cursor: pointer;
   display: inline-block;
   padding: 0.75rem 1.25rem;
   border-radius: 10rem;
@@ -396,6 +401,7 @@ body {
 }
 
 .language-switcher-button {
+  cursor: pointer;
   border: none;
   background-color: #4580ee;
 }
@@ -423,7 +429,6 @@ body {
 }
 
 .main {
-  height: 90vh;
   align-items: center;
   justify-content: center;
   margin: auto;
@@ -432,12 +437,27 @@ body {
 }
 
 .project {
-  width: 300px;
-  height: 200px;
+  box-sizing: border-box;
+  width: 400px;
+  height: 300px;
   align-items: center;
   margin: 20px;
   justify-content: space-around;
 }
 .project:hover {
   background: rgba(230, 163, 163, 0.8078431373);
+}
+
+.project__image {
+  box-sizing: border-box;
+  width: 400px;
+  height: 300px;
+}
+.project__image:hover {
+  -webkit-filter: blur(15px);
+}
+
+.project__title {
+  background-color: #fff;
+  position: absolute;
 }/*# sourceMappingURL=index.css.map */

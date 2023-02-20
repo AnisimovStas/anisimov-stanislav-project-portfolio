@@ -15,16 +15,27 @@
 }
 
 .portfolio-header-title {
+  margin-left: 3px;
   color: rgb(255, 255, 255);
 
   cursor: default;
+
   &:hover {
-    animation: animated-gradient 2s infinite alternate-reverse;
-  }
-  @keyframes animated-gradient {
-    to {
-      background-position: 200%;
-    }
+    color: transparent;
+    background-image: linear-gradient(
+      to right,
+      #000000,
+      #000000,
+      #000000,
+      #000000,
+      #000000
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 200%;
+    background-position: -200%;
+    transition: all ease-in-out 1s;
+    cursor: pointer;
   }
 }
 .portfolio-header-title__mainText {
@@ -35,19 +46,20 @@
 }
 .portfolio-nav {
   width: 80%;
-  @extend .border;
 }
 .portfolio-nav__list {
+  cursor: pointer;
   justify-content: start;
   @extend .flexRow;
 }
 .portfolio-nav__item {
+  text-align: center;
   display: inline-block;
   padding: 0.75rem 1.25rem;
   border-radius: 10rem;
   color: #fff;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 0.8rem;
   letter-spacing: 0.15rem;
   transition: all 0.3s;
   position: relative;
@@ -93,6 +105,7 @@
   @extend .flexRow;
 }
 .portfolio-links__about {
+  cursor: pointer;
   display: inline-block;
   padding: 0.75rem 1.25rem;
   border-radius: 10rem;
@@ -144,6 +157,7 @@
   justify-content: space-around;
 }
 .language-switcher-button {
+  cursor: pointer;
   border: none;
   background-color: $main-color;
 }
@@ -166,8 +180,6 @@
 // Основной контент
 
 .main {
-  height: 90vh;
-  @extend .border;
   align-items: center;
   justify-content: center;
   margin: auto;
@@ -175,12 +187,26 @@
   flex-direction: column;
 }
 .project {
-  width: 300px;
-  height: 200px;
+  box-sizing: border-box;
+  width: 400px;
+  height: 300px;
   align-items: center;
   margin: 20px;
   @extend .border;
   @extend .flexColl;
   justify-content: space-around;
   @include hover($main-hover);
+}
+.project__image {
+  box-sizing: border-box;
+  width: 400px;
+  height: 300px;
+  &:hover {
+    -webkit-filter: blur(15px);
+  }
+}
+.project__title {
+  @extend .border;
+  background-color: #fff;
+  position: absolute;
 }

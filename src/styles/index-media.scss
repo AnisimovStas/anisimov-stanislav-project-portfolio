@@ -12,5 +12,6 @@
 .main {
   @include _576 {
     flex-direction: row !important;
+    height: 720px;
   }
 }

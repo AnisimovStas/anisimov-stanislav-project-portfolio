@@ -1,7 +1,9 @@
 <script setup>
 import { ref } from "vue";
+import projectsData from "./data/projects.json";
 const sidebarShow = ref(false);
 const isActive = ref(false);
+const projects = ref(projectsData);
 </script>
 
 <template>
@@ -14,8 +16,13 @@ const isActive = ref(false);
     <nav class="portfolio-nav">
       <ul class="portfolio-nav__list">
         <li class="portfolio-nav__item">Обо мне</li>
-        <li class="portfolio-nav__item">Проект 1</li>
-        <li class="portfolio-nav__item">Проект 2</li>
+        <li
+          v-for="project in projects"
+          :key="project"
+          class="portfolio-nav__item"
+        >
+          {{ project.name }}
+        </li>
       </ul>
     </nav>
     <div class="portfolio__links portfolio-links">
@@ -61,29 +68,15 @@ const isActive = ref(false);
   <main class="portfolio-content">
     <!-- Список проектов-->
     <div class="main">
-      <div class="project">
+      <div v-for="project in projects" :key="project" class="project">
         <img
           class="project__image"
-          src="random"
+          :src="`../../src/assets/${project.img}.png`"
           alt="тут будет картинка проекта "
         />
-        <div class="project__title"><p>Проект</p></div>
-      </div>
-      <div class="project">
-        <img
-          class="project__image"
-          src="random"
-          alt="тут будет картинка проекта "
-        />
-        <div class="project__title"><p>Проект</p></div>
-      </div>
-      <div class="project">
-        <img
-          class="project__image"
-          src="random"
-          alt="тут будет картинка проекта "
-        />
-        <div class="project__title"><p>Проект</p></div>
+        <div class="project__title">
+          <p>{{ project.name }}</p>
+        </div>
       </div>
     </div>
   </main>
