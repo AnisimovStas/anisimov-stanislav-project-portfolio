@@ -1,6 +1,6 @@
 .contentBox {
   display: flex;
-  max-width: 1024px;
+  max-width: 2048px;
   margin: auto;
   color: $main-text-color;
 }
@@ -18,3 +18,12 @@
   border: 1px solid;
 }
 
+.shine {
+  animation: animated-gradient 2s infinite alternate-reverse;
+
+  @keyframes animated-gradient {
+    to {
+      background-position: 200%;
+    }
+  }
+}

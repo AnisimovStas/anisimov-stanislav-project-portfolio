@@ -1,6 +1,15 @@
 $main-color: #4580ee;
+$darker-main-color: #355da8;
 $main-hover: #e6a3a3ce;
 $main-text-color: #ffffff;
 $muscle-color: $main-color;
+$gradient: conic-gradient(
+  #553c9a 30%,
+  #ee4b2b 40%,
+  #ee4b2b 70%,
+  #00c2cb 80%,
+  #553c9a
+);
 $font-title: "Oswald", sans-serif;
 $font-common: "Koulen", cursive;
+$Comfortaa: "Comfortaa", cursive;

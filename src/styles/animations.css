@@ -55,4 +55,12 @@
   40%, 60% {
     transform: translate3d(4px, 0, 0);
   }
+}
+.shine {
+  animation: animated-gradient 2s infinite alternate-reverse;
+}
+@keyframes animated-gradient {
+  to {
+    background-position: 200%;
+  }
 }/*# sourceMappingURL=animations.css.map */

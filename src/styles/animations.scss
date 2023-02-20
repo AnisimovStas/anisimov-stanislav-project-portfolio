@@ -19,9 +19,8 @@
   opacity: 0;
 }
 
-
 .bounce {
-  animation: bounce-in 0.3s ;
+  animation: bounce-in 0.3s;
 }
 @keyframes bounce-in {
   0% {
@@ -60,5 +59,15 @@
   40%,
   60% {
     transform: translate3d(4px, 0, 0);
+  }
+}
+
+.shine {
+  animation: animated-gradient 2s infinite alternate-reverse;
+
+  @keyframes animated-gradient {
+    to {
+      background-position: 200%;
+    }
   }
 }

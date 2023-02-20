@@ -6,7 +6,7 @@
 
 .portfolio-links__about {
   @include _576 {
-    display: none;
+    display: none !important;
   }
 }
 .main {
