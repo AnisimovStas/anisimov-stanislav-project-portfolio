@@ -63,6 +63,10 @@ const projects = ref(projectsData);
       </div>
     </div>
   </header>
+  <RouterLink to="/">Home</RouterLink>
+  <RouterLink to="/about">About</RouterLink>
+  <router-view></router-view>
+
   <main class="portfolio-content">
     <!-- Список проектов-->
     <div class="main">
