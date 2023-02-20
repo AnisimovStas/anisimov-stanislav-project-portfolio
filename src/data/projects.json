@@ -2,12 +2,12 @@
   "Exercises Atlas": {
     "name": "Exercises Atlas",
     "img": "ExercisesAtlas",
-    "description": "This web application helps find out new exercises for each muscle with some descripted information about it (general rules, instruction, video)"
+    "description": "This web app helps find out new exercises for each muscle with some descripted information about it (general rules, instruction, video)"
   },
   "custom Crypto Currency": {
     "name": "Custom Crypto Currency",
-    "img": "",
-    "description": "bla bla bla bla lba"
+    "img": "Custom Crypto Currency",
+    "description": "This web app was created to simplify crypto currencies trades between themselfs"
   },
   "Crypto Tracker": {
     "name": "Crypto Tracker",

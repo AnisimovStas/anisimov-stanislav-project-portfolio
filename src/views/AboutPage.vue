@@ -1,11 +1,4 @@
-<script setup>
-import { ref } from "vue";
-import projectsData from "./data/Sprojects.json";
-const sidebarShow = ref(false);
-const isActive = ref(false);
-const projects = ref(projectsData);
-</script>
-
+<script setup></script>
 <template>
   <header class="portfolio-header">
     <div class="portfolio-header-title">
@@ -35,7 +28,7 @@ const projects = ref(projectsData);
             :class="{ 'language-switcher-button bounce': isActive }"
           >
             <img
-              src="./assets/russia_icon.png"
+              src="../assets/russia_icon.png"
               :class="{
                 ' language-switcher-button__image language-switcher-button__image--active':
                   !isActive,
@@ -50,7 +43,7 @@ const projects = ref(projectsData);
             :class="{ 'language-switcher-button bounce': !isActive }"
           >
             <img
-              src="./assets/usa_icon.png"
+              src="../assets/usa_icon.png"
               :class="{
                 'language-switcher-button__image language-switcher-button__image--active':
                   isActive,
@@ -63,22 +56,5 @@ const projects = ref(projectsData);
       </div>
     </div>
   </header>
-  <main class="portfolio-content">
-    <!-- Список проектов-->
-    <div class="main">
-      <div v-for="project in projects" :key="project" class="project">
-        <img
-          class="project__image"
-          :src="`../../src/assets/${project.img}.png`"
-          alt="тут будет картинка проекта "
-        />
-        <div class="project__title">
-          <p>{{ project.name }}</p>
-        </div>
-        <div class="project__description">{{ project.description }}</div>
-      </div>
-    </div>
-  </main>
-
-  <div id="app"></div>
+  <main class="portfolio-content">хехехе</main>
 </template>
