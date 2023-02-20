@@ -204,6 +204,7 @@
   }
 }
 .project__image {
+  @extend .border;
   box-sizing: border-box;
   width: 400px;
   height: 300px;
