@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue";
-import projectsData from "./data/Sprojects.json";
+import projectsData from "./data/projects.json";
 const sidebarShow = ref(false);
 const isActive = ref(false);
 const projects = ref(projectsData);
