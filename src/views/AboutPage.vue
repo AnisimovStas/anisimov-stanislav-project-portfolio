@@ -46,13 +46,25 @@
     <div class="contacts-content">
       <p class="contacts__title">Contact links:</p>
       <p class="contacts__item">
-        <a href="https://github.com/AnisimovStas" target="_blank">G </a>
+        <a
+          href="https://github.com/AnisimovStas"
+          target="_blank"
+          class="contacts__link"
+          >G
+        </a>
       </p>
       <p class="contacts__item">
-        <a href="https://telegram.me/otpbard" target="_blank">TG </a>
+        <a
+          href="https://telegram.me/otpbard"
+          target="_blank"
+          class="contacts__link"
+          >TG
+        </a>
       </p>
       <p class="contacts__item">
-        <a href="mailto: anisimov-stas.stas@yandex.ru"> @ </a>
+        <a href="mailto: anisimov-stas.stas@yandex.ru" class="contacts__link">
+          @
+        </a>
       </p>
     </div>
   </div>
