@@ -8,12 +8,20 @@
   min-height: 75px;
   height: auto;
   background-color: $main-color;
+}
+
+.portfolio-header-content {
+  @extend .contentBox;
+  width: 100%;
+  font-family: $Comfortaa;
+  min-height: 75px;
+  height: auto;
+  background-color: $main-color;
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
-
 .portfolio-header-title {
   margin-left: 3px;
   min-width: 155px;
@@ -230,4 +238,56 @@
   padding: 1rem;
 
   position: absolute;
+}
+.about {
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  background-color: aquamarine;
+}
+.about-content {
+  @extend .contentBox;
+  @extend .border;
+  width: 100%;
+}
+.contacts {
+  padding: 5px;
+  background-color: $main-color;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+}
+.contacts-content {
+  @extend .contentBox;
+  align-items: center;
+  display: flex;
+  justify-content: right;
+  color: whitesmoke;
+  width: 100%;
+}
+.contacts__item {
+  width: 25px;
+  height: 25px;
+  border: 1px solid;
+  padding: 2px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+  @include mx-(7px);
+  &:hover {
+    background-color: darken($main-color, 15%);
+  }
+}
+a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: whitesmoke;
+  text-decoration: none;
 }

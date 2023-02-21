@@ -136,14 +136,13 @@ table {
 }
 
 body {
+  background-color: #fcf6f5;
   height: 100vh;
 }
 
-.contentBox {
-  display: flex;
-  max-width: 2048px;
+.contentBox, .contacts-content, .about-content, .portfolio-header-content {
+  max-width: 1280px;
   margin: auto;
-  color: #ffffff;
 }
 
 .flexColl, .project {
@@ -158,7 +157,7 @@ body {
   justify-content: center;
 }
 
-.border, .project__title, .project, .portfolio-about {
+.border, .about-content, .project__title, .project__image, .project, .portfolio-about {
   border: 1px solid;
 }
 
@@ -269,10 +268,18 @@ body {
   min-height: 75px;
   height: auto;
   background-color: #2f3c7e;
+}
+
+.portfolio-header-content {
+  width: 100%;
+  font-family: "Comfortaa", cursive;
+  min-height: 75px;
+  height: auto;
+  background-color: #2f3c7e;
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .portfolio-header-title {
@@ -476,7 +483,7 @@ body {
   margin-top: 150px;
   padding: 1rem;
   border-radius: 5rem;
-  background-color: #FBEAEB;
+  background-color: #fcf6f5;
   position: absolute;
 }
 
@@ -490,4 +497,59 @@ body {
   font-family: "Comfortaa", cursive;
   padding: 1rem;
   position: absolute;
+}
+
+.about {
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: aquamarine;
+}
+
+.about-content {
+  width: 100%;
+}
+
+.contacts {
+  padding: 5px;
+  background-color: #2f3c7e;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+}
+
+.contacts-content {
+  align-items: center;
+  display: flex;
+  justify-content: right;
+  color: whitesmoke;
+  width: 100%;
+}
+
+.contacts__item {
+  width: 25px;
+  height: 25px;
+  border: 1px solid;
+  padding: 2px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+  margin-left: 7px;
+  margin-right: 7px;
+}
+.contacts__item:hover {
+  background-color: #1a2146;
+}
+
+a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: whitesmoke;
+  text-decoration: none;
 }/*# sourceMappingURL=index.css.map */
