@@ -240,21 +240,59 @@
   position: absolute;
 }
 .about {
+  font-family: $Comfortaa;
   align-items: center;
   justify-content: center;
   margin: auto;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-
-  background-color: aquamarine;
+}
+.about-content-photo {
+  min-width: 250px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid;
+}
+.photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  border: 1px solid;
+}
+.photo__description {
+  margin: 5px;
+  text-align: center;
+  font-size: small;
 }
 .about-content {
+  min-height: 350px;
   @extend .contentBox;
   @extend .border;
-  width: 100%;
+  margin: 10%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.about__title {
+  margin: 10px;
+  font-weight: bolder;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: larger;
+}
+.about__text {
+  margin-left: 10px;
+  text-align: left;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  line-height: 20px;
 }
 .contacts {
+  font-family: $Comfortaa;
   padding: 5px;
   background-color: $main-color;
   position: absolute;

@@ -20,3 +20,8 @@
     @include mx-(20px);
   }
 }
+.about-content-photo {
+  @include _992 {
+    display: flex !important;
+  }
+}
