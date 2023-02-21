@@ -1,42 +1,79 @@
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+const sliderStatus = ref([true]);
+function swipeReverse(slider) {
+  if (slider.length > 1) {
+    for (let i = 0; i < slider.length; i++) {
+      slider[i] = false;
+    }
+    slider.shift();
+    slider[slider.length - 1] = true;
+    return slider;
+  }
+}
+function swipe(slider) {
+  if (slider.length < 4) {
+    slider.unshift(false);
+    slider.slice(0, 4);
+  }
+  return slider;
+}
+function selectSlide(slider, slide) {
+  for (let i = 0; i < slider.length; i++) {
+    slider[i] = false;
+  }
+  slider[slide] = true;
+}
+</script>
 <template>
   <div class="EA">
     <div class="EA-content">
+      {{ sliderStatus }}
       <div class="EA-slides">
         <div class="CSSgal">
-          <!-- Don't wrap targets in parent -->
-          <s id="s1"></s>
-          <s id="s2"></s>
-          <s id="s3"></s>
-          <s id="s4"></s>
-
           <div class="slider">
-            <div>
-              <img class="slider__image" src="@/assets/ExercisesAtlas.png" />
+            <div v-if="sliderStatus[0] == true">
+              <img
+                class="slider__image"
+                src="@/assets/ExercisesAtlas.png"
+                alt="slide1"
+              />
             </div>
-            <div style="background: #85b">
-              <h2>Slide 2</h2>
+            <div v-if="sliderStatus[1] == true" style="background: #85b">
+              <img
+                class="slider__image"
+                src="@/assets/34234234234234.png"
+                alt="slide2"
+              />
             </div>
-            <div style="background: #e95">
-              <h2>Slide 3</h2>
+            <div v-if="sliderStatus[2] == true" style="background: #e95">
+              <img
+                class="slider__image"
+                src="@/assets/34234234234234.png"
+                alt="slide3"
+              />
             </div>
-            <div style="background: #e59">
-              <h2>Slide 4</h2>
+            <div v-if="sliderStatus[3] == true" style="background: #e59">
+              <img
+                class="slider__image"
+                src="@/assets/34234234234234.png"
+                alt="slide4"
+              />
             </div>
           </div>
 
           <div class="prevNext">
-            <div><a href="#s4"> &#60; </a><a href="#s2">&#62;</a></div>
-            <div><a href="#s1">&#60;</a><a href="#s3">&#62;</a></div>
-            <div><a href="#s2">&#60;</a><a href="#s4">&#62;</a></div>
-            <div><a href="#s3">&#60;</a><a href="#s1">&#62;</a></div>
+            <div>
+              <a @click="swipeReverse(sliderStatus)"> &#60; </a>
+              <a @click="swipe(sliderStatus)">&#62;</a>
+            </div>
           </div>
 
           <div class="bullets">
-            <a href="#s1">1</a>
-            <a href="#s2">2</a>
-            <a href="#s3">3</a>
-            <a href="#s4">4</a>
+            <a @click="selectSlide(sliderStatus, 0)">1</a>
+            <a @click="selectSlide(sliderStatus, 1)">2</a>
+            <a @click="selectSlide(sliderStatus, 2)">3</a>
+            <a @click="selectSlide(sliderStatus, 3)">4</a>
           </div>
         </div>
       </div>

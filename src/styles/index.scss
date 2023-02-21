@@ -406,6 +406,7 @@
   visibility: hidden; /* Hide all but first P/N container */
 }
 .slider__image {
+  min-width: 300px;
   width: 100%;
   height: 100%;
 }
