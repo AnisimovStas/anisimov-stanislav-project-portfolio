@@ -7,16 +7,18 @@ const projects = ref(projectsData);
   <main class="portfolio-content">
     <!-- Список проектов-->
     <div class="main">
-      <div v-for="project in projects" :key="project" class="project">
-        <img
-          class="project__image"
-          :src="`../../src/assets/${project.img}.png`"
-          alt="тут будет картинка проекта "
-        />
-        <div class="project__title">
-          <p>{{ project.name }}</p>
-        </div>
-        <div class="project__description">{{ project.description }}</div>
+      <div v-for="project in projects" :key="project">
+        <RouterLink :to="{ path: project.id }" class="project">
+          <img
+            class="project__image"
+            :src="`../../src/assets/${project.img}.png`"
+            alt="тут будет картинка проекта "
+          />
+          <div class="project__title">
+            <p>{{ project.name }}</p>
+          </div>
+          <div class="project__description">{{ project.description }}</div>
+        </RouterLink>
       </div>
     </div>
   </main>

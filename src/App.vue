@@ -21,12 +21,12 @@ const projects = ref(projectsData);
           <RouterLink to="/about">
             <li class="portfolio-nav__item">About</li></RouterLink
           >
-          <li
-            v-for="project in projects"
-            :key="project"
-            class="portfolio-nav__item"
-          >
-            {{ project.name }}
+          <li v-for="project in projects" :key="project">
+            <RouterLink :to="{ path: project.id }">
+              <div class="portfolio-nav__item">
+                {{ project.name }}
+              </div>
+            </RouterLink>
           </li>
         </ul>
       </nav>

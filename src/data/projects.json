@@ -1,15 +1,18 @@
 {
   "Exercises Atlas": {
+    "id": "EA",
     "name": "Exercises Atlas",
     "img": "ExercisesAtlas",
     "description": "This web app helps find out new exercises for each muscle with some descripted information about it (general rules, instruction, video)"
   },
   "custom Crypto Currency": {
+    "id": "CCC",
     "name": "Custom Crypto Currency",
     "img": "Custom Crypto Currency",
     "description": "This web app was created to simplify crypto currencies trades between themselfs"
   },
   "Crypto Tracker": {
+    "id": "CT",
     "name": "Crypto Tracker",
     "img": "",
     "description": "bla bla bla bla lba"
