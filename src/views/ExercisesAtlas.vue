@@ -8,27 +8,26 @@ function swipeReverse(slider) {
     }
     slider.shift();
     slider[slider.length - 1] = true;
+
     return slider;
   }
 }
 function swipe(slider) {
   if (slider.length < 4) {
     slider.unshift(false);
-    slider.slice(0, 4);
   }
   return slider;
 }
 function selectSlide(slider, slide) {
-  for (let i = 0; i < slider.length; i++) {
+  for (let i = 0; i < 4; i++) {
     slider[i] = false;
   }
-  slider[slide] = true;
+  slider.splice(slide, 4 - slide, true);
 }
 </script>
 <template>
   <div class="EA">
     <div class="EA-content">
-      {{ sliderStatus }}
       <div class="EA-slides">
         <div class="CSSgal">
           <div class="slider">
@@ -42,38 +41,78 @@ function selectSlide(slider, slide) {
             <div v-if="sliderStatus[1] == true" style="background: #85b">
               <img
                 class="slider__image"
-                src="@/assets/34234234234234.png"
+                src="@/assets/ExercisesAtlas2.png"
                 alt="slide2"
               />
             </div>
             <div v-if="sliderStatus[2] == true" style="background: #e95">
               <img
                 class="slider__image"
-                src="@/assets/34234234234234.png"
+                src="@/assets/ExercisesAtlas3.png"
                 alt="slide3"
               />
             </div>
             <div v-if="sliderStatus[3] == true" style="background: #e59">
               <img
                 class="slider__image"
-                src="@/assets/34234234234234.png"
+                src="@/assets/ExercisesAtlas4.png"
                 alt="slide4"
               />
             </div>
           </div>
 
           <div class="prevNext">
-            <div>
-              <a @click="swipeReverse(sliderStatus)"> &#60; </a>
-              <a @click="swipe(sliderStatus)">&#62;</a>
+            <div
+              class="prevNext__btn prevNext__btn--left"
+              @click="swipeReverse(sliderStatus)"
+            >
+              &#60;
+            </div>
+            <div
+              class="prevNext__btn prevNext__btn--right"
+              @click="swipe(sliderStatus)"
+            >
+              &#62;
             </div>
           </div>
 
           <div class="bullets">
-            <a @click="selectSlide(sliderStatus, 0)">1</a>
-            <a @click="selectSlide(sliderStatus, 1)">2</a>
-            <a @click="selectSlide(sliderStatus, 2)">3</a>
-            <a @click="selectSlide(sliderStatus, 3)">4</a>
+            <div
+              class="bullets__bullets"
+              :class="{
+                'bullets__bullets--active': sliderStatus[0],
+              }"
+              @click="selectSlide(sliderStatus, 0)"
+            >
+              1
+            </div>
+            <div
+              class="bullets__bullets"
+              :class="{
+                'bullets__bullets--active': sliderStatus[1],
+              }"
+              @click="selectSlide(sliderStatus, 1)"
+            >
+              2
+            </div>
+            <div
+              class="bullets__bullets"
+              :class="{
+                'bullets__bullets--active': sliderStatus[2],
+              }"
+              @click="selectSlide(sliderStatus, 2)"
+            >
+              3
+            </div>
+            <div
+              class="bullets__bullets"
+              :class="{
+                'bullets__bullets--active': sliderStatus[3],
+              }"
+              @click="selectSlide(sliderStatus, 3)"
+            >
+              4
+            </div>
           </div>
         </div>
       </div>
@@ -85,14 +124,27 @@ function selectSlide(slider, slide) {
             descripted information about it (general rules, instruction, video)
           </p>
         </div>
-        <div class="Text-Stack">
-          <h2 class="Text-Stack__title">Stack of used technology</h2>
-          <p class="Text-Stack__text">vue | something else</p>
+        <div class="text-Stack">
+          <h2 class="text-Stack__title">Stack of used technology</h2>
+          <div class="text-stack__text">
+            <p>CSS: Sass</p>
+            <p>Framework: Vue.js</p>
+            <p>Builder: Vue CLI</p>
+          </div>
         </div>
         <div class="text-links">
           <h2 class="text-links__title">Links</h2>
-          <p class="text-links__text">gitHub: <a>git</a></p>
-          <p class="text-links__text">Production build: <a>git</a></p>
+          <div class="text-links__text">
+            <p>
+              GitHub:
+              <a
+                href="https://github.com/AnisimovStas/exercises-atlas"
+                target="_blank"
+                >link</a
+              >
+            </p>
+            <p>Production build: <a>git</a></p>
+          </div>
         </div>
       </div>
     </div>

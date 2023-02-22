@@ -272,7 +272,7 @@
   min-height: 350px;
   @extend .contentBox;
   @extend .border;
-  margin: 10%;
+  margin: 8%;
   width: 80%;
   display: flex;
   justify-content: center;
@@ -332,26 +332,21 @@
 }
 
 .EA {
+  @extend .border;
   background-color: $main-bg;
 }
 .EA-content {
   @extend .contentBox;
   @extend .border;
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.EA-slides {
-  margin: 15px;
-  width: 80%;
-  max-width: 450px;
-  height: 300px;
-  @extend .border;
-  display: flex;
   justify-content: center;
-  align-items: center;
 }
+
 .EA-text {
+  font-size: medium;
   font-family: $Comfortaa;
   display: flex;
   flex-direction: column;
@@ -360,83 +355,116 @@
 }
 .text__title {
   margin: 10px;
-  font-size: larger;
+  font-size: xx-large;
   font-weight: bolder;
 }
+.text__description {
+  @include mx-(25px);
+  max-width: 450px;
+}
 
+.EA-slides {
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text-Stack {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.text-Stack__title {
+  margin: 10px;
+  font-size: x-large;
+  font-weight: bold;
+}
+.text-stack__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.text-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.text-links__title {
+  margin: 10px;
+  font-size: x-large;
+  font-weight: bolder;
+}
+.text-links__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &a {
+    color: black;
+    text-decoration: dashed;
+  }
+}
 .CSSgal {
   position: relative;
   overflow: hidden;
-  height: 100%; /* Or set a fixed height */
 }
 
-/* SLIDER */
-
-.CSSgal .slider {
-  height: 100%;
-  white-space: nowrap;
-  font-size: 0;
-  transition: 0.8s;
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* SLIDES */
+.slider__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $slider-w;
+  height: $slider-h;
+}
 
-.CSSgal .slider > * {
-  font-size: 1rem;
-  display: inline-block;
-  white-space: normal;
-  vertical-align: top;
-  height: 100%;
+.prevNext {
+  font-family: $Comfortaa;
+  font-weight: 900;
+  font-size: x-large;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  background: none 50% no-repeat;
-  background-size: cover;
-}
-
-/* PREV/NEXT, CONTAINERS & ANCHORS */
-
-.CSSgal .prevNext {
+  cursor: pointer;
   position: absolute;
   z-index: 1;
-  top: 50%;
-  width: 100%;
-  height: 0;
+  top: 35%;
 }
-
-.CSSgal .prevNext > div + div {
-  visibility: hidden; /* Hide all but first P/N container */
-}
-.slider__image {
-  min-width: 300px;
-  width: 100%;
-  height: 100%;
-}
-.CSSgal .prevNext a {
-  border: 1px solid;
-  color: black;
-  background: #fff;
-  position: absolute;
-  width: 60px;
+.prevNext__btn {
+  @include mx-(3px);
   height: 60px;
-  line-height: 60px; /* If you want to place numbers */
-  text-align: center;
-  opacity: 0.7;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  left: 0;
-}
-.CSSgal .prevNext a:hover {
-  opacity: 1;
-}
-.CSSgal .prevNext a + a {
-  left: auto;
-  right: 0;
+  width: 60px;
+  display: flex;
+  opacity: 0.8;
+  justify-content: center;
+  align-items: center;
+  background-color: $main-bg;
+  @extend .border;
+  border-radius: 100%;
+  &:hover {
+    opacity: 1;
+    background-color: #fff;
+  }
 }
 
-/* NAVIGATION */
+.bullets {
+  font-family: $Comfortaa;
+  font-weight: 900;
+  font-size: large;
+  display: flex;
+  justify-content: center;
 
-.CSSgal .bullets {
   position: absolute;
   z-index: 2;
   bottom: 0;
@@ -444,104 +472,24 @@
   width: 100%;
   text-align: center;
 }
-.CSSgal .bullets > a {
-  border: 1px solid;
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  text-decoration: none;
-  text-align: center;
-  background: rgba(255, 255, 255, 1);
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+.bullets__bullets {
+  opacity: 0.8;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include mx-(5px);
+  @extend .border;
+  height: 45px;
+  width: 45px;
+  border-radius: 100%;
+  background-color: $main-bg;
+  &:hover {
+    opacity: 1;
+    background-color: #fff;
+  }
 }
-.CSSgal .bullets > a + a {
-  background: rgba(255, 255, 255, 0.5); /* Dim all but first */
-}
-.CSSgal .bullets > a:hover {
-  background: rgba(255, 255, 255, 0.7) !important;
-}
-
-/* NAVIGATION BUTTONS */
-/* ALL: */
-.CSSgal > s:target ~ .bullets > * {
-  background: rgba(255, 255, 255, 0.5);
-}
-/* ACTIVE */
-#s1:target ~ .bullets > *:nth-child(1) {
-  background: rgba(255, 255, 255, 1);
-}
-#s2:target ~ .bullets > *:nth-child(2) {
-  background: rgba(255, 255, 255, 1);
-}
-#s3:target ~ .bullets > *:nth-child(3) {
-  background: rgba(255, 255, 255, 1);
-}
-#s4:target ~ .bullets > *:nth-child(4) {
-  background: rgba(255, 255, 255, 1);
-}
-/* More slides? Add here more rules */
-
-/* PREV/NEXT CONTAINERS VISIBILITY */
-/* ALL: */
-.CSSgal > s:target ~ .prevNext > * {
-  visibility: hidden;
-}
-/* ACTIVE: */
-#s1:target ~ .prevNext > *:nth-child(1) {
-  visibility: visible;
-}
-#s2:target ~ .prevNext > *:nth-child(2) {
-  visibility: visible;
-}
-#s3:target ~ .prevNext > *:nth-child(3) {
-  visibility: visible;
-}
-#s4:target ~ .prevNext > *:nth-child(4) {
-  visibility: visible;
-}
-/* More slides? Add here more rules */
-
-/* SLIDER ANIMATION POSITIONS */
-
-#s1:target ~ .slider {
-  transform: translateX(0%);
-  -webkit-transform: translateX(0%);
-}
-#s2:target ~ .slider {
-  transform: translateX(-100%);
-  -webkit-transform: translateX(-100%);
-}
-#s3:target ~ .slider {
-  transform: translateX(-200%);
-  -webkit-transform: translateX(-200%);
-}
-#s4:target ~ .slider {
-  transform: translateX(-300%);
-  -webkit-transform: translateX(-300%);
-}
-/* More slides? Add here more rules */
-
-/* YOU'RE THE DESIGNER! 
-   ____________________
-   All above was mainly to get it working :)
-   CSSgal CUSTOM STYLES / OVERRIDES HERE: */
-
-.CSSgal {
-  color: #fff;
-  text-align: center;
-}
-.CSSgal .slider h2 {
-  margin-top: 40vh;
-  font-weight: 200;
-  letter-spacing: -0.06em;
-  word-spacing: 0.2em;
-  font-size: 3em;
-}
-.CSSgal a {
-  border-radius: 50%;
-  margin: 0 3px;
-  color: rgba(0, 0, 0, 0.8);
-  text-decoration: none;
+.bullets__bullets--active {
+  opacity: 1;
+  background-color: #fff;
 }

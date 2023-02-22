@@ -25,3 +25,33 @@
     display: flex !important;
   }
 }
+.EA {
+  @include _992 {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.EA-content {
+  @include _992 {
+    margin: 8% !important;
+    flex-direction: row !important;
+  }
+}
+
+.text__description {
+  @include _768 {
+    max-width: $slider-w-768 !important;
+  }
+}
+.slider__image {
+  @include _768 {
+    width: $slider-w-768 !important;
+    height: $slider-h-768 !important;
+  }
+  @include _992 {
+    width: 550px !important;
+    height: 550px !important;
+  }
+}
