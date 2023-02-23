@@ -32,11 +32,7 @@ function selectSlide(slider, slide) {
         <div class="CSSgal">
           <div class="slider">
             <div v-if="sliderStatus[0] == true">
-              <img
-                class="slider__image"
-                src="@/assets/CCC1.png"
-                alt="slide1"
-              />
+              <img class="slider__image" src="@/assets/CCC1.png" alt="slide1" />
             </div>
             <div v-if="sliderStatus[1] == true" style="background: #85b">
               <img class="slider__image" src="@/assets/CCC3.png" alt="slide2" />
@@ -130,7 +126,12 @@ function selectSlide(slider, slide) {
                 >link</a
               >
             </p>
-            <p>Production build: <a>git</a></p>
+            <p>
+              Production build:
+              <a href="https://anisimovstas.github.io/CCC/" target="_blank"
+                >link</a
+              >
+            </p>
           </div>
         </div>
       </div>
