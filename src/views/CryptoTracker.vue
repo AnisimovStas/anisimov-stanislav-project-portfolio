@@ -128,7 +128,14 @@ function selectSlide(slider, slide) {
                 >link</a
               >
             </p>
-            <p>Production build: <a>git</a></p>
+            <p>
+              Production build:
+              <a
+                href="https://anisimovstas.github.io/cryptoPortfolio/"
+                target="_blank"
+                >Link</a
+              >
+            </p>
           </div>
         </div>
       </div>
