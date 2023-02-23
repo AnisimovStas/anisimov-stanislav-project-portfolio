@@ -6,7 +6,11 @@ import CCC from "@/views/СustomСryptoСurrency.vue";
 import CT from "@/views/CryptoTracker.vue";
 
 const routes = [
-  { path: "/", name: "Home", component: HomePage },
+  {
+    path: "/",
+    name: "Home",
+    component: HomePage,
+  },
   { path: "/about", name: "About", component: AboutPage },
   {
     path: "/EA",
@@ -25,7 +29,7 @@ const routes = [
   },
 ];
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory('/anisimov-stanislav-project-portfolio/'),
   routes,
 });
 
