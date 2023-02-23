@@ -332,12 +332,10 @@
 }
 
 .EA {
-  @extend .border;
   background-color: $main-bg;
 }
 .EA-content {
   @extend .contentBox;
-  @extend .border;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -354,11 +352,13 @@
   align-items: center;
 }
 .text__title {
+  text-align: center;
   margin: 10px;
   font-size: xx-large;
   font-weight: bolder;
 }
 .text__description {
+  text-align: center;
   @include mx-(25px);
   max-width: 450px;
 }

@@ -157,7 +157,7 @@ body {
   justify-content: center;
 }
 
-.border, .bullets__bullets, .prevNext__btn, .EA-content, .EA, .about-content, .project__title, .project__image, .project, .portfolio-about {
+.border, .bullets__bullets, .prevNext__btn, .about-content, .project__title, .project__image, .project, .portfolio-about {
   border: 1px solid;
 }
 
@@ -252,7 +252,7 @@ body {
 @media (min-width: 992px) {
   .main {
     flex-direction: row !important;
-    height: 720px;
+    height: 90vh;
   }
 }
 
@@ -300,7 +300,7 @@ body {
 @media (min-width: 992px) {
   .slider__image {
     width: 550px !important;
-    height: 550px !important;
+    height: 400px !important;
   }
 }
 
@@ -662,12 +662,14 @@ body {
 }
 
 .text__title {
+  text-align: center;
   margin: 10px;
   font-size: xx-large;
   font-weight: bolder;
 }
 
 .text__description {
+  text-align: center;
   margin-left: 25px;
   margin-right: 25px;
   max-width: 450px;

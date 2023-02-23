@@ -8,13 +8,13 @@
   "custom Crypto Currency": {
     "id": "CCC",
     "name": "Custom Crypto Currency",
-    "img": "Custom Crypto Currency",
+    "img": "CCC1",
     "description": "This web app was created to simplify crypto currencies trades between themselfs"
   },
   "Crypto Tracker": {
     "id": "CT",
     "name": "Crypto Tracker",
-    "img": "",
-    "description": "bla bla bla bla lba"
+    "img": "CT1",
+    "description": "This web app allows to view the current cryptocurrency rates, clicking on which opens a menu with a real-time chart"
   }
 }
