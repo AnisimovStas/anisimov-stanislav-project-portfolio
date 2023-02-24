@@ -9,8 +9,10 @@
   "expirience": "Currently has over 1 years of experience in mainly HTML, CSS (TailwindCSS, SCSS) and JavaScript(Vue.js ecosystem).",
   "goodwords": "Obsessed with application performance, user experience, and simplicity.",
   "endingwords": "At this web portfolio you may see showcases of my works.",
-  "eaDescription": " This web app helps find out new exercises for each muscle with some descripted information about it (general rules, instruction, video)",
+  "eaDescription": " This web app helps find out new exercises for each muscle with some descripted information about it (general rules, instruction, video).",
   "stack": "Stack of used technology",
   "links": "Links",
-  "build":"Production build:"
+  "build": "Production build:",
+  "ctDescription": "This web app allows to view the current cryptocurrency rates, clicking on which opens a menu with a real-time chart.",
+  "cccDescription":"This web app was created to simplify crypto currencies tradesbetween themselfs."
 }

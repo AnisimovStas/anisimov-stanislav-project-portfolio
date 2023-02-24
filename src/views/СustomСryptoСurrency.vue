@@ -1,5 +1,7 @@
 <script setup>
 import { ref } from "vue";
+import { useI18n } from "vue-i18n";
+const { t, locale } = useI18n({ useScope: "global" });
 const sliderStatus = ref([true]);
 function swipeReverse(slider) {
   if (slider.length > 1) {
@@ -120,12 +122,11 @@ function selectSlide(slider, slide) {
         <h1 class="text__title">Custom Crypto Currency</h1>
         <div class="text__description">
           <p>
-            This web app was created to simplify crypto currencies trades
-            between themselfs
+            {{ t("cccDescription") }}
           </p>
         </div>
         <div class="text-Stack">
-          <h2 class="text-Stack__title">Stack of used technology</h2>
+          <h2 class="text-Stack__title">{{ t("stack") }}</h2>
           <div class="text-stack__text">
             <p>CSS: Tailwind</p>
             <p>Framework: Vue.js</p>
@@ -134,7 +135,7 @@ function selectSlide(slider, slide) {
           </div>
         </div>
         <div class="text-links">
-          <h2 class="text-links__title">Links</h2>
+          <h2 class="text-links__title">{{ t("links") }}</h2>
           <div class="text-links__text">
             <p>
               GitHub:
@@ -143,7 +144,7 @@ function selectSlide(slider, slide) {
               >
             </p>
             <p>
-              Production build:
+              {{ t("build") }}
               <a href="https://anisimovstas.github.io/CCC/" target="_blank"
                 >link</a
               >
