@@ -1,4 +1,7 @@
-<script setup></script>
+<script setup>
+import { useI18n } from "vue-i18n";
+const { t, locale } = useI18n({ useScope: "global" });
+</script>
 <template>
   <div class="about">
     <div class="about-content">
@@ -11,32 +14,28 @@
           />
         </div>
         <div class="photo__description">
-          Anisimov Stanislav
+          {{ t("myname") }}
           <p>Frontend developer</p>
-          <p>26 y/o</p>
+          <p>{{ t("yo") }}</p>
         </div>
       </div>
       <div class="about-content-text">
-        <h1 class="about__title">ABOUT</h1>
+        <h1 class="about__title">{{ t("about") }}</h1>
         <br />
         <p class="about__text">
-          Hello, my name is Stanislav Anisimov, im frontend web developer and
-          web designer.
+          {{ t("hello") }}
         </p>
         <p class="about__text">
-          After graduating with MA and 3 years in building estimates works
-          expirience i'm become self-taught front-end web development.
+          {{ t("graduate") }}
         </p>
         <p class="about__text">
-          Currently has over 1 years of experience in mainly CSS, HTML
-          (TailwindCSS, SCSS) and JavaScript(Vue.js ecosystem).
+          {{ t("expirience") }}
         </p>
         <p class="about__text">
-          Obsessed with application performance, user experience, and
-          simplicity.
+          {{ t("goodwords") }}
         </p>
         <p class="about__text">
-          At this web portfolio you may see showcases of my works.
+          {{ t("endingwords") }}
           <span style="font-weight: bold">Enjoy!</span>
         </p>
       </div>

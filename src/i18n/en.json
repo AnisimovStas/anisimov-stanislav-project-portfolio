@@ -1,5 +1,12 @@
 {
   "titleSTR1": "Anisimov Stanislav",
   "titleSTR2": "project portfolio",
-  "about":"About"
+  "about": "About",
+  "myname": "Anisimov Stanislav",
+  "yo": "26 y/o",
+  "hello": "Hello, my name is Stanislav Anisimov, im frontend web developer and web designer.",
+  "graduate": " After graduating with MA and 3 years in building estimates works expirience i'm become self-taught front-end web development.",
+  "expirience":"Currently has over 1 years of experience in mainly HTML, CSS (TailwindCSS, SCSS) and JavaScript(Vue.js ecosystem).",
+  "goodwords":"Obsessed with application performance, user experience, and simplicity.",
+  "endingwords":"At this web portfolio you may see showcases of my works."
 }

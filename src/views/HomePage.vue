@@ -1,7 +1,10 @@
 <script setup>
 import { ref } from "vue";
 import projectsData from "../data/projects.json";
+import { useI18n } from "vue-i18n";
+const { t, locale } = useI18n({ useScope: "global" });
 const projects = ref(projectsData);
+
 </script>
 <template>
   <main class="portfolio-content">
