@@ -1,7 +1,7 @@
 {
   "include": ["./src/**/*"],
   "compilerOptions": {
-    "baseUrl": "./https://anisimovstas.github.io/anisimov-stanislav-project-portfolio/",
+    "baseUrl": "./anisimov-stanislav-project-portfolio/",
     "paths": {
       "@/*": ["./src/*"]
     }
