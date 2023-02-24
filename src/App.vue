@@ -57,7 +57,7 @@ const projects = ref(projectsData);
               :class="{ 'language-switcher-button bounce': !isActive }"
             >
               <img
-                src="./assets/usa_icon.png"
+                src="https://i.ibb.co/KjQvWN3/usa-icon.png"
                 :class="{
                   'language-switcher-button__image language-switcher-button__image--active':
                     isActive,

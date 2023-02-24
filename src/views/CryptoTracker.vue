@@ -32,16 +32,32 @@ function selectSlide(slider, slide) {
         <div class="CSSgal">
           <div class="slider">
             <div v-if="sliderStatus[0] == true">
-              <img class="slider__image" src="@/assets/CT1.png" alt="slide1" />
+              <img
+                class="slider__image"
+                src="https://i.ibb.co/PMJSD5F/CT1.png"
+                alt="slide1"
+              />
             </div>
             <div v-if="sliderStatus[1] == true" style="background: #85b">
-              <img class="slider__image" src="@/assets/CT2.png" alt="slide2" />
+              <img
+                class="slider__image"
+                src="https://i.ibb.co/s2LXmNF/CT2.png"
+                alt="slide2"
+              />
             </div>
             <div v-if="sliderStatus[2] == true" style="background: #e95">
-              <img class="slider__image" src="@/assets/CT3.png" alt="slide3" />
+              <img
+                class="slider__image"
+                src="https://i.ibb.co/9VYvjVw/CT3.png"
+                alt="slide3"
+              />
             </div>
             <div v-if="sliderStatus[3] == true" style="background: #e59">
-              <img class="slider__image" src="@/assets/CT4.png" alt="slide4" />
+              <img
+                class="slider__image"
+                src="https://i.ibb.co/SxPgpRT/CT4.png"
+                alt="slide4"
+              />
             </div>
           </div>
 

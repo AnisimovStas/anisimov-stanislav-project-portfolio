@@ -34,28 +34,28 @@ function selectSlide(slider, slide) {
             <div v-if="sliderStatus[0] == true">
               <img
                 class="slider__image"
-                src="@/assets/ExercisesAtlas.png"
+                src="https://i.ibb.co/vmHZkYp/Exercises-Atlas-title.png"
                 alt="slide1"
               />
             </div>
             <div v-if="sliderStatus[1] == true" style="background: #85b">
               <img
                 class="slider__image"
-                src="@/assets/ExercisesAtlas2.png"
+                src="https://i.ibb.co/Bw1TZ51/Exercises-Atlas2.png"
                 alt="slide2"
               />
             </div>
             <div v-if="sliderStatus[2] == true" style="background: #e95">
               <img
                 class="slider__image"
-                src="@/assets/ExercisesAtlas3.png"
+                src="https://i.ibb.co/MR0nt5n/Exercises-Atlas3.png"
                 alt="slide3"
               />
             </div>
             <div v-if="sliderStatus[3] == true" style="background: #e59">
               <img
                 class="slider__image"
-                src="@/assets/ExercisesAtlas4.png"
+                src="https://i.ibb.co/FgQ6P9M/Exercises-Atlas4.png"
                 alt="slide4"
               />
             </div>

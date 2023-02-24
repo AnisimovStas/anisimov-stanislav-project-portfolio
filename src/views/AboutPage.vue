@@ -6,7 +6,7 @@
         <div class="photo">
           <img
             class="photo"
-            src="@/assets/myPhoto.jpeg"
+            src="https://i.ibb.co/DkW6x45/myPhoto.jpg"
             alt="photo placeholder"
           />
         </div>
