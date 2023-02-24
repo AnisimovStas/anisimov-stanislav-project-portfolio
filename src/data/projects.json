@@ -2,19 +2,19 @@
   "Exercises Atlas": {
     "id": "EA",
     "name": "Exercises Atlas",
-    "img": "ExercisesAtlas-title",
+    "img": "https://i.ibb.co/xh6KrZd/Exercises-Atlas-title.png",
     "description": "This web app helps find out new exercises for each muscle with some descripted information about it (general rules, instruction, video)"
   },
   "custom Crypto Currency": {
     "id": "CCC",
     "name": "Custom Crypto Currency",
-    "img": "CCC1-title",
+    "img": "https://i.ibb.co/RpT9y6N/CCC1.png",
     "description": "This web app was created to simplify crypto currencies trades between themselfs"
   },
   "Crypto Tracker": {
     "id": "CT",
     "name": "Crypto Tracker",
-    "img": "CT1-title",
+    "img": "https://i.ibb.co/LCtBWqb/CT1-title.png",
     "description": "This web app allows to view the current cryptocurrency rates, clicking on which opens a menu with a real-time chart"
   }
 }
