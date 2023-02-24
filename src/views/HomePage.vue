@@ -11,7 +11,7 @@ const projects = ref(projectsData);
         <RouterLink :to="{ path: project.id }" class="project">
           <img
             class="project__image"
-            :src="`../../src/assets/${project.img}.png`"
+            :src="`../../../assets/${project.img}.png`"
             alt="тут будет картинка проекта "
           />
           <div class="project__title">
