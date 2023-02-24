@@ -1,10 +1,18 @@
 <script setup>
-import { ref } from "vue";
+import { ref, watch } from "vue";
 import projectsData from "../data/projects.json";
+import projectsDataRU from "../data/projectsRU.json";
 import { useI18n } from "vue-i18n";
 const { t, locale } = useI18n({ useScope: "global" });
 const projects = ref(projectsData);
-
+watch(() => {
+  if (locale.value == "ru") {
+    projects.value = projectsDataRU;
+    console.log(projects.value);
+  } else {
+    projects.value = projectsData;
+  }
+});
 </script>
 <template>
   <main class="portfolio-content">
@@ -20,7 +28,9 @@ const projects = ref(projectsData);
           <div class="project__title">
             <p>{{ project.name }}</p>
           </div>
-          <div class="project__description">{{ project.description }}</div>
+          <div class="project__description">
+            {{ project.description }}
+          </div>
         </RouterLink>
       </div>
     </div>
