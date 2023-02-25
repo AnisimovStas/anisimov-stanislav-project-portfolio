@@ -2,6 +2,7 @@
 @import "index-media";
 @import "../components/PortfolioHeader/style";
 @import "../components/ContactsBar/style.scss";
+@import "../components/ImageSlider/ImageSlider.scss";
 // Основной контент
 .main {
   align-items: center;
@@ -148,12 +149,7 @@
   max-width: 450px;
 }
 
-.EA-slides {
-  margin: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .text-Stack {
   text-align: center;
   display: flex;
@@ -193,88 +189,4 @@
     text-decoration: dashed;
   }
 }
-.CSSgal {
-  position: relative;
-  overflow: hidden;
-}
 
-.slider {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.slider__image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: $slider-w;
-  height: $slider-h;
-}
-
-.prevNext {
-  font-family: $Comfortaa;
-  font-weight: 900;
-  font-size: x-large;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  cursor: pointer;
-  position: absolute;
-  z-index: 1;
-  top: 35%;
-}
-.prevNext__btn {
-  @include mx-(3px);
-  height: 60px;
-  width: 60px;
-  display: flex;
-  opacity: 0.8;
-  justify-content: center;
-  align-items: center;
-  background-color: $main-bg;
-  @extend .border;
-  border-radius: 100%;
-  &:hover {
-    opacity: 1;
-    background-color: #fff;
-  }
-}
-
-.bullets {
-  font-family: $Comfortaa;
-  font-weight: 900;
-  font-size: large;
-  display: flex;
-  justify-content: center;
-
-  position: absolute;
-  z-index: 2;
-  bottom: 0;
-  padding: 10px 0;
-  width: 100%;
-  text-align: center;
-}
-.bullets__bullets {
-  opacity: 0.8;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  @include mx-(5px);
-  @extend .border;
-  height: 45px;
-  width: 45px;
-  border-radius: 100%;
-  background-color: $main-bg;
-  &:hover {
-    opacity: 1;
-    background-color: #fff;
-  }
-}
-.bullets__bullets--active {
-  opacity: 1;
-  background-color: #fff;
-}

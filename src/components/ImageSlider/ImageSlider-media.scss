@@ -1,0 +1,10 @@
+.slider__image {
+  @include _768 {
+    width: $slider-w-768 !important;
+    height: $slider-h-768 !important;
+  }
+  @include _992 {
+    width: 550px !important;
+    height: 400px !important;
+  }
+}
