@@ -1,124 +1,40 @@
 <script setup>
 import { ref } from "vue";
 import { useI18n } from "vue-i18n";
-const { t, locale } = useI18n({ useScope: "global" });
-const sliderStatus = ref([true]);
-function swipeReverse(slider) {
-  if (slider.length > 1) {
-    for (let i = 0; i < slider.length; i++) {
-      slider[i] = false;
-    }
-    slider.shift();
-    slider[slider.length - 1] = true;
-
-    return slider;
-  }
-}
-function swipe(slider) {
-  if (slider.length < 4) {
-    slider.unshift(false);
-  }
-  return slider;
-}
-function selectSlide(slider, slide) {
-  for (let i = 0; i < 4; i++) {
-    slider[i] = false;
-  }
-  slider.splice(slide, 4 - slide, true);
-}
+import ImageSlider from "../components/ImageSlider/ImageSlider.vue";
+const { t } = useI18n({ useScope: "global" });
+const slidersData = ref([
+  {
+    img: "https://i.ibb.co/vmHZkYp/Exercises-Atlas-title.png",
+    id: 0,
+    alt: "slide #1",
+    isActive: true,
+  },
+  {
+    img: "https://i.ibb.co/Bw1TZ51/Exercises-Atlas2.png",
+    id: 1,
+    alt: "slide #2",
+    isActive: false,
+  },
+  {
+    img: "https://i.ibb.co/MR0nt5n/Exercises-Atlas3.png",
+    id: 2,
+    alt: "slide #3",
+    isActive: false,
+  },
+  {
+    img: "https://i.ibb.co/FgQ6P9M/Exercises-Atlas4.png",
+    id: 3,
+    alt: "slide #4",
+    isActive: false,
+  },
+]);
 </script>
 <template>
   <div class="EA">
     <div class="EA-content">
-      <div class="EA-slides">
-        <div class="CSSgal">
-          <div class="slider">
-            <div v-if="sliderStatus[0] == true">
-              <img
-                class="slider__image"
-                src="https://i.ibb.co/vmHZkYp/Exercises-Atlas-title.png"
-                alt="slide1"
-              />
-            </div>
-            <div v-if="sliderStatus[1] == true" style="background: #85b">
-              <img
-                class="slider__image"
-                src="https://i.ibb.co/Bw1TZ51/Exercises-Atlas2.png"
-                alt="slide2"
-              />
-            </div>
-            <div v-if="sliderStatus[2] == true" style="background: #e95">
-              <img
-                class="slider__image"
-                src="https://i.ibb.co/MR0nt5n/Exercises-Atlas3.png"
-                alt="slide3"
-              />
-            </div>
-            <div v-if="sliderStatus[3] == true" style="background: #e59">
-              <img
-                class="slider__image"
-                src="https://i.ibb.co/FgQ6P9M/Exercises-Atlas4.png"
-                alt="slide4"
-              />
-            </div>
-          </div>
-
-          <div class="prevNext">
-            <div
-              class="prevNext__btn prevNext__btn--left"
-              @click="swipeReverse(sliderStatus)"
-            >
-              &#60;
-            </div>
-            <div
-              class="prevNext__btn prevNext__btn--right"
-              @click="swipe(sliderStatus)"
-            >
-              &#62;
-            </div>
-          </div>
-
-          <div class="bullets">
-            <div
-              class="bullets__bullets"
-              :class="{
-                'bullets__bullets--active': sliderStatus[0],
-              }"
-              @click="selectSlide(sliderStatus, 0)"
-            >
-              1
-            </div>
-            <div
-              class="bullets__bullets"
-              :class="{
-                'bullets__bullets--active': sliderStatus[1],
-              }"
-              @click="selectSlide(sliderStatus, 1)"
-            >
-              2
-            </div>
-            <div
-              class="bullets__bullets"
-              :class="{
-                'bullets__bullets--active': sliderStatus[2],
-              }"
-              @click="selectSlide(sliderStatus, 2)"
-            >
-              3
-            </div>
-            <div
-              class="bullets__bullets"
-              :class="{
-                'bullets__bullets--active': sliderStatus[3],
-              }"
-              @click="selectSlide(sliderStatus, 3)"
-            >
-              4
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="EA-text">
+      <ImageSlider :slidersData="slidersData" />
+      <div class="EA-text"> 
         <h1 class="text__title">Exercises Atlas</h1>
         <div class="text__description">
           <p>
