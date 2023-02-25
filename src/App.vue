@@ -3,8 +3,8 @@ import PortfolioHeader from "@/components/PortfolioHeader/PortfolioHeader.vue";
 </script>
 
 <template>
-  <PortfolioHeader />
-  <router-view></router-view>
-
-  <div id="app"></div>
+  <div id="app">
+    <PortfolioHeader />
+    <router-view />
+  </div>
 </template>

@@ -1,6 +1,7 @@
 <script setup>
 import { useI18n } from "vue-i18n";
-const { t, locale } = useI18n({ useScope: "global" });
+import ContactsBar from "@/components/ContactsBar/ContactsBar.vue";
+const { t } = useI18n({ useScope: "global" });
 </script>
 <template>
   <div class="about">
@@ -41,30 +42,5 @@ const { t, locale } = useI18n({ useScope: "global" });
       </div>
     </div>
   </div>
-  <div class="contacts">
-    <div class="contacts-content">
-      <p class="contacts__title">Contact links:</p>
-      <p class="contacts__item">
-        <a
-          href="https://github.com/AnisimovStas"
-          target="_blank"
-          class="contacts__link"
-          >G
-        </a>
-      </p>
-      <p class="contacts__item">
-        <a
-          href="https://telegram.me/otpbard"
-          target="_blank"
-          class="contacts__link"
-          >TG
-        </a>
-      </p>
-      <p class="contacts__item">
-        <a href="mailto: anisimov-stas.stas@yandex.ru" class="contacts__link">
-          @
-        </a>
-      </p>
-    </div>
-  </div>
+  <ContactsBar />
 </template>

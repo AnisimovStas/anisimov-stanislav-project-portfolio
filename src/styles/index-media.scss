@@ -1,14 +1,3 @@
-.portfolio-nav {
-  @include max_992 {
-    display: none;
-  }
-}
-
-.portfolio-links__about {
-  @include _992 {
-    display: none !important;
-  }
-}
 .main {
   @include _992 {
     flex-direction: row !important;

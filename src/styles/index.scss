@@ -1,9 +1,8 @@
 @import "common";
 @import "index-media";
 @import "../components/PortfolioHeader/style";
-
+@import "../components/ContactsBar/style.scss";
 // Основной контент
-
 .main {
   align-items: center;
   justify-content: center;
@@ -115,44 +114,6 @@
   letter-spacing: 1px;
   margin-bottom: 10px;
   line-height: 20px;
-}
-.contacts {
-  font-family: $Comfortaa;
-  padding: 5px;
-  background-color: $main-color;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  display: flex;
-}
-.contacts-content {
-  @extend .contentBox;
-  align-items: center;
-  display: flex;
-  justify-content: right;
-  color: whitesmoke;
-  width: 100%;
-}
-.contacts__item {
-  width: 25px;
-  height: 25px;
-  border: 1px solid;
-  padding: 2px;
-  border-radius: 100%;
-  display: flex;
-  justify-content: center;
-  vertical-align: middle;
-  @include mx-(7px);
-  &:hover {
-    background-color: darken($main-color, 15%);
-  }
-}
-.contacts__link {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: whitesmoke;
-  text-decoration: none;
 }
 
 .EA {

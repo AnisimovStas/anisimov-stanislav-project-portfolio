@@ -1,0 +1,11 @@
+.portfolio-nav {
+  @include max_992 {
+    display: none;
+  }
+}
+
+.portfolio-links__about {
+  @include _992 {
+    display: none !important;
+  }
+}
