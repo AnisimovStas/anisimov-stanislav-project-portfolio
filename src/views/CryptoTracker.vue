@@ -2,63 +2,84 @@
 import { ref } from "vue";
 import { useI18n } from "vue-i18n";
 const { t } = useI18n({ useScope: "global" });
-const sliderStatus = ref([true]);
-function swipeReverse(slider) {
-  if (slider.length > 1) {
-    for (let i = 0; i < slider.length; i++) {
-      slider[i] = false;
+const slidersData = ref([
+  {
+    img: "https://i.ibb.co/PMJSD5F/CT1.png",
+    id: 0,
+    alt: "slide #1",
+    isActive: true,
+  },
+  {
+    img: "https://i.ibb.co/s2LXmNF/CT2.png",
+    id: 1,
+    alt: "slide #2",
+    isActive: false,
+  },
+  {
+    img: "https://i.ibb.co/9VYvjVw/CT3.png",
+    id: 2,
+    alt: "slide #3",
+    isActive: false,
+  },
+  {
+    img: "https://i.ibb.co/SxPgpRT/CT4.png",
+    id: 3,
+    alt: "slide #4",
+    isActive: false,
+  },
+]);
+function nextSlide(sliders) {
+  let activeSlide;
+  sliders.forEach((slide) => {
+    if (slide.isActive == true && slide.id != sliders.length - 1) {
+      activeSlide = slide.id;
+      slide.isActive = false;
     }
-    slider.shift();
-    slider[slider.length - 1] = true;
+    if (slide.id == activeSlide + 1) {
+      slide.isActive = true;
+    }
+  });
+}
 
-    return slider;
-  }
+function prevSlide(sliders) {
+  let activeSlide;
+  sliders.forEach((slide) => {
+    if (slide.isActive == true && slide.id != 0) {
+      activeSlide = slide.id;
+      console.log("1st parth" + activeSlide);
+      slide.isActive = false;
+    }
+    sliders.forEach((slide) => {
+      if (slide.id == activeSlide - 1) {
+        slide.isActive = true;
+        console.log("2nd parth " + slide.id);
+      }
+    });
+  });
 }
-function swipe(slider) {
-  if (slider.length < 4) {
-    slider.unshift(false);
-  }
-  return slider;
-}
-function selectSlide(slider, slide) {
-  for (let i = 0; i < 4; i++) {
-    slider[i] = false;
-  }
-  slider.splice(slide, 4 - slide, true);
+function selectedSlide(sliders, id) {
+  sliders.forEach((slide) => {
+    if (slide.id != id) {
+      slide.isActive = false;
+    } else {
+      slide.isActive = true;
+    }
+  });
 }
 </script>
 <template>
+  <!--normal content-->
   <div class="EA">
     <div class="EA-content">
       <div class="EA-slides">
         <div class="CSSgal">
           <div class="slider">
-            <div v-if="sliderStatus[0] == true">
+            <div v-for="slide in slidersData">
               <img
+                v-if="slide.isActive"
                 class="slider__image"
-                src="https://i.ibb.co/PMJSD5F/CT1.png"
-                alt="slide1"
-              />
-            </div>
-            <div v-if="sliderStatus[1] == true" style="background: #85b">
-              <img
-                class="slider__image"
-                src="https://i.ibb.co/s2LXmNF/CT2.png"
-                alt="slide2"
-              />
-            </div>
-            <div v-if="sliderStatus[2] == true" style="background: #e95">
-              <img
-                class="slider__image"
-                src="https://i.ibb.co/9VYvjVw/CT3.png"
-                alt="slide3"
-              />
-            </div>
-            <div v-if="sliderStatus[3] == true" style="background: #e59">
-              <img
-                class="slider__image"
-                src="https://i.ibb.co/SxPgpRT/CT4.png"
-                alt="slide4"
+                :src="slide.img"
+                :alt="slide.alt"
               />
             </div>
           </div>
@@ -66,13 +87,13 @@ function selectSlide(slider, slide) {
           <div class="prevNext">
             <div
               class="prevNext__btn prevNext__btn--left"
-              @click="swipeReverse(sliderStatus)"
+              @click="prevSlide(slidersData)"
             >
               &#60;
             </div>
             <div
               class="prevNext__btn prevNext__btn--right"
-              @click="swipe(sliderStatus)"
+              @click="nextSlide(slidersData)"
             >
               &#62;
             </div>
@@ -80,44 +101,19 @@ function selectSlide(slider, slide) {
 
           <div class="bullets">
             <div
+              v-for="slide in slidersData"
               class="bullets__bullets"
               :class="{
-                'bullets__bullets--active': sliderStatus[0],
+                'bullets__bullets--active': slide.isActive,
               }"
-              @click="selectSlide(sliderStatus, 0)"
+              @click="selectedSlide(slidersData, slide.id)"
             >
-              1
-            </div>
-            <div
-              class="bullets__bullets"
-              :class="{
-                'bullets__bullets--active': sliderStatus[1],
-              }"
-              @click="selectSlide(sliderStatus, 1)"
-            >
-              2
-            </div>
-            <div
-              class="bullets__bullets"
-              :class="{
-                'bullets__bullets--active': sliderStatus[2],
-              }"
-              @click="selectSlide(sliderStatus, 2)"
-            >
-              3
-            </div>
-            <div
-              class="bullets__bullets"
-              :class="{
-                'bullets__bullets--active': sliderStatus[3],
-              }"
-              @click="selectSlide(sliderStatus, 3)"
-            >
-              4
+              {{ slide.id + 1 }}
             </div>
           </div>
         </div>
       </div>
+
       <div class="EA-text">
         <h1 class="text__title">Crypto Tracker</h1>
         <div class="text__description">
