@@ -4,6 +4,7 @@ import AboutPage from "@/views/AboutPage.vue";
 import exercisesAtlas from "@/views/ExercisesAtlas.vue";
 import CCC from "@/views/СustomСryptoСurrency.vue";
 import CT from "@/views/CryptoTracker.vue";
+import FF from "@/views/FavoriteFilms.vue";
 
 const routes = [
   {
@@ -27,9 +28,14 @@ const routes = [
     name: "Crypto Tracker",
     component: CT,
   },
+  {
+    path: "/FF",
+    name: "Favorite films",
+    component: FF,
+  },
 ];
 const router = createRouter({
-  history: createWebHistory('/anisimov-stanislav-project-portfolio/'),
+  history: createWebHistory("/anisimov-stanislav-project-portfolio/"),
   routes,
 });
 

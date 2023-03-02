@@ -16,5 +16,11 @@
     "name": "Crypto Tracker",
     "img": "https://i.ibb.co/LCtBWqb/CT1-title.png",
     "description": "This web app allows to view the current cryptocurrency rates, clicking on which opens a menu with a real-time chart."
+  },
+  "Favorite films": {
+    "id": "FF",
+    "name": "Favorite films",
+    "img": "https://i.ibb.co/FnrQyCX/FF.png",
+    "description": "This web app fetch films from datebase API, then you able to add it to favorite, and in second tab switch movie state to watched. This project was creater for testing pinia functional."
   }
 }
